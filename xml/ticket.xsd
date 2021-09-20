@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="tickets">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="ticket" maxOccurs="unbounded" minOccurs="0">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element name="subject" type="xs:string"/>
+            <xs:element name="datetime" type="xs:dateTime"/>
+            <xs:element name="messages">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="message" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                          <xs:attribute name="senderid" type="xs:positiveInteger" use="required"/>
+                          <xs:attribute name="timestamp" type="xs:dateTime" use="required"/>
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="userid"  type="xs:positiveInteger" use="required"/>
+          <xs:attribute name="ticketid" type="xs:positiveInteger" use="required"/>
+          <xs:attribute name="status" type="statuscode" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:simpleType name="statuscode">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="resolved"/>
+    <xs:enumeration value="ongoing"/>
+  </xs:restriction>
+</xs:simpleType>
+</xs:schema>

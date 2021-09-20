@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="user.xsd">
+  <!-- Login with user and admin -->
+  <user accountType="client">
+    <id>61</id>
+    <username>neilmoras</username>
+    <email>neil.j@yahoo.com</email>
+     <password>$2y$10$I/cPIcq.wpOD5RrDX8pof.YLs9rET1r3KRlsg7v0dn9GZDKsigXEy</password>
+    <!-- xml5203 -->
+  </user>
+  <user accountType="admin">
+    <id>34</id>
+    <username>johndoe</username>
+    <staffId>N12345</staffId>
+    <email>user@hotmail.com</email>
+    <password>$2y$10$KOHvIL44hE.HDnunIVQVH.TfaO0nt3a3hh4bdGUqSBJq6csBcJCTm</password>
+    <!-- xmldom5203 -->
+  </user>
+<user accountType="client">
+  <id>83</id>
+  <username>neil</username>
+  <email>neilmoras@gmail.com</email>
+  <password>$2y$10$sJdxqxsbNnK7k2lNkwS.NeQHW1gt3d4DGQzv6ZyK7CnXIySIdrb0C</password>
+  <!-- johndoe123 -->
+</user>
+</users>
